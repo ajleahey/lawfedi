@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawfedi.org - Attorneys, Lawyers and Legal Professionals on Mastodon, Matrix, Threads, etc.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+        }
+        h1 {
+            background-color: #555;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+        }
+        h2 {
+            color: #777;
+            margin: 10px 20px 20px 20px;
+            text-align: center;
+        }
+        h2 .fediverse {
+            color: #555;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .grid-item, .about-section {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .about-section {
+            background-color: #f0f0f0;
+            grid-column: span 2;
+            text-align: center;
+        }
+        .grid-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .grid-item a, .about-section a {
+            color: #333;
+            text-decoration: none;
+        }
+        .grid-item a:hover, .about-section a:hover {
+            text-decoration: underline;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background: #fff;
+            color: #333;
+            border: 1px solid #777;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body onclick="document.getElementById('tooltip').style.display='none'">
+    <h1>lawfedi.org</h1>
+    <h2>Legal and legal-adjacent projects in the broader <span class="fediverse" onclick="event.stopPropagation(); document.getElementById('tooltip').style.display='block'">fediverse</span>.</h2>
+    <div id="tooltip" class="tooltip" onclick="event.stopPropagation()">The fediverse is a decentralized social network that allows different platforms to communicate with each other. It promotes freedom, privacy, and interoperability across various social media sites.</div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="https://lawstodon.org" target="_blank">
+                <strong>Lawstodon.org</strong>
+                <p>The hub for legal professionals within the fediverse, Lawstodon.org acts as the white pages for lawyers and jurists, fostering collaboration and connections.</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://esq.social" target="_blank">
+                <strong>esq.social</strong>
+                <p>Home to the largest federated legal community online, esq.social is the primary Mastodon instance for legal practitioners and those interested in law within the fediverse.</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://chat.matrix.esq.social" target="_blank">
+                <strong>esq.social Matrix</strong>
+                <p>A specialized Matrix server for legal professionals and academics. Connect through <a href="https://matrix.matrix.esq.social" target="_blank">https://matrix.matrix.esq.social</a>. Join the main room: <a href="https://matrix.to/#/#lawgeneral:matrix.esq.social" target="_blank">#lawgeneral</a>.</p>
+            </a>
+        </div>
+        <div class="about-section">
+    <h2>About</h2>
+    <p>These projects are thoughtfully (mostly) created and/or maintained by <a href="https://esq.social/@andrew" target="_blank">Andrew Leahey</a>, a contributor to the legal fediverse community. The initiatives are entirely ad-free, reflecting a commitment to an uncluttered user experience. While the labor behind these projects is donated, the costs of maintenance are substantial. Support in defraying these costs can be provided by donating to the <a href="https://www.patreon.com/esqsocial" target="_blank">esq.social Patreon</a>.</p>
+</div>
+
+    </div>
+</body>
+</html>

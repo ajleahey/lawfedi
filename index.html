@@ -12,7 +12,7 @@
             margin: 0;
         }
         h1 {
-            background-color: #555;
+            background-color: #bbb; /* Lighter grey for banner */
             color: #fff;
             padding: 10px;
             margin: 0;
@@ -23,7 +23,7 @@
             flex-direction: column;
         }
         .header-image {
-            max-width: 10%;
+            max-width: 20%;
             height: auto;
             margin-bottom: 10px;
         }
@@ -44,17 +44,20 @@
         }
         .project-box {
             flex-basis: calc(25% - 20px);
-            background-color: #ddd;
+            background-color: #ddd; /* Lighter grey for boxes */
             padding: 10px;
             margin: 10px;
             min-height: 150px; /* Ensures uniform size */
             box-sizing: border-box;
+            border-radius: 10px;
+            text-align: center; /* Centers the text */
         }
         .about-box {
             background-color: #ececec;
             padding: 20px;
             margin: 10px;
             width: calc(100% - 40px);
+            border-radius: 10px;
         }
         @media (max-width: 768px) {
             .project-box {
@@ -66,7 +69,7 @@
 <body onclick="document.getElementById('tooltip').style.display='none'">
     <h1>
         <img src="rocketlogo.png" alt="Rocket Logo" class="header-image">
-     
+        lawfedi.org
     </h1>
     <h2>Legal and legal-adjacent projects in the broader <span class="fediverse" onclick="event.stopPropagation(); document.getElementById('tooltip').style.display='block'">fediverse</span>.</h2>
     <!-- Project Boxes -->

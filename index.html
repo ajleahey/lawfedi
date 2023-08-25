@@ -12,7 +12,7 @@
             margin: 0;
         }
         h1 {
-            background-color: #bbb; /* Lighter grey for banner */
+            background-color: #bbb;
             color: #fff;
             padding: 10px;
             margin: 0;
@@ -32,11 +32,6 @@
             margin: 10px 20px 20px 20px;
             text-align: center;
         }
-        h2 .fediverse {
-            color: #555;
-            text-decoration: underline;
-            cursor: pointer;
-        }
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -44,20 +39,28 @@
         }
         .project-box {
             flex-basis: calc(25% - 20px);
-            background-color: #ddd; /* Lighter grey for boxes */
+            background-color: #ddd;
             padding: 10px;
             margin: 10px;
-            min-height: 150px; /* Ensures uniform size */
+            min-height: 150px;
             box-sizing: border-box;
             border-radius: 10px;
-            text-align: center; /* Centers the text */
+            text-align: center;
+            align-items: flex-start;
+        }
+        .project-title a {
+            font-weight: bold;
+            color: #555;
+        }
+        .project-desc {
+            margin-top: 10px;
         }
         .about-box {
             background-color: #ececec;
             padding: 20px;
             margin: 10px;
-            width: calc(100% - 40px);
             border-radius: 10px;
+            flex-basis: calc(100% - 40px); /* Ensures alignment */
         }
         @media (max-width: 768px) {
             .project-box {
@@ -66,18 +69,25 @@
         }
     </style>
 </head>
-<body onclick="document.getElementById('tooltip').style.display='none'">
+<body>
     <h1>
         <img src="rocketlogo.png" alt="Rocket Logo" class="header-image">
-        lawfedi.org
     </h1>
     <h2>Legal and legal-adjacent projects in the broader <span class="fediverse" onclick="event.stopPropagation(); document.getElementById('tooltip').style.display='block'">fediverse</span>.</h2>
     <!-- Project Boxes -->
     <div class="container">
-        <a href="https://lawstodon.org" target="_blank" class="project-box">Lawstodon.org - the white pages for lawyers and jurists in the fediverse.</a>
-        <a href="https://esq.social" target="_blank" class="project-box">esq.social - the largest legal and law-adjacent Mastodon instance in the fediverse.</a>
-        <a href="https://chat.matrix.esq.social" target="_blank" class="project-box">esq.social Matrix - a Matrix server for legal professionals and academics. Server: <a href="https://matrix.matrix.esq.social" target="_blank">https://matrix.matrix.esq.social</a>, main room: <a href="https://matrix.to/#/#lawgeneral:matrix.esq.social" target="_blank">#lawgeneral</a>.</a>
-        <!-- Other Project Boxes -->
+        <div class="project-box">
+            <div class="project-title"><a href="https://lawstodon.org" target="_blank">Lawstodon.org</a></div>
+            <div class="project-desc">The white pages for lawyers and jurists in the fediverse.</div>
+        </div>
+        <div class="project-box">
+            <div class="project-title"><a href="https://esq.social" target="_blank">esq.social</a></div>
+            <div class="project-desc">The largest legal and law-adjacent Mastodon instance in the fediverse.</div>
+        </div>
+        <div class="project-box">
+            <div class="project-title"><a href="https://chat.matrix.esq.social" target="_blank">esq.social Matrix</a></div>
+            <div class="project-desc">A Matrix server for legal professionals and academics. Server: <a href="https://matrix.matrix.esq.social" target="_blank">https://matrix.matrix.esq.social</a>, main room: <a href="https://matrix.to/#/#lawgeneral:matrix.esq.social" target="_blank">#lawgeneral</a>.</div>
+        </div>
     </div>
     <!-- About Section -->
     <div class="about-box">

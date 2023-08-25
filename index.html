@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lawfedi.org</title>
+    <title>Lawfedi.org - Legal professionals and attorneys on Mastodon and in the fediverse.</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,17 +14,18 @@
         h1 {
             background-color: #555;
             color: #fff;
-            padding: 20px;
+            padding: 10px;
             margin: 0;
             text-align: center;
-            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
         .header-image {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
             max-width: 20%;
             height: auto;
+            margin-bottom: 10px;
         }
         h2 {
             color: #777;
@@ -64,8 +65,8 @@
 </head>
 <body onclick="document.getElementById('tooltip').style.display='none'">
     <h1>
-        lawfedi.org
         <img src="rocketlogo.png" alt="Rocket Logo" class="header-image">
+        lawfedi.org
     </h1>
     <h2>Legal and legal-adjacent projects in the broader <span class="fediverse" onclick="event.stopPropagation(); document.getElementById('tooltip').style.display='block'">fediverse</span>.</h2>
     <!-- Project Boxes -->

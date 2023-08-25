@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lawfedi.org - Attorneys, Lawyers and Legal Professionals on Mastodon, Matrix, Threads, etc.</title>
+    <title>Lawfedi.org</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -67,6 +67,25 @@
             border-radius: 5px;
             z-index: 1;
         }
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Stacks items vertically on small screens */
+            }
+
+            .grid-item, .about-section {
+                padding: 15px; /* Smaller padding for small screens */
+            }
+
+            h1, h2 {
+                padding-left: 10px; /* Adjusting padding for headings */
+                padding-right: 10px;
+            }
+
+            .tooltip {
+                max-width: 90%; /* Ensure tooltip fits on small screens */
+            }
+        }
     </style>
 </head>
 <body onclick="document.getElementById('tooltip').style.display='none'">
@@ -83,7 +102,7 @@
         <div class="grid-item">
             <a href="https://esq.social" target="_blank">
                 <strong>esq.social</strong>
-                <p>Home to the largest federated legal community online, esq.social is the primary Mastodon instance for legal practitioners and those interested in law within the fediverse.</p>
+                <p>Home to the largest legal community online, esq.social is the primary Mastodon instance for legal practitioners and those interested in law within the fediverse.</p>
             </a>
         </div>
         <div class="grid-item">
@@ -93,10 +112,9 @@
             </a>
         </div>
         <div class="about-section">
-    <h2>About</h2>
-    <p>These projects are thoughtfully (mostly) created and/or maintained by <a href="https://esq.social/@andrew" target="_blank">Andrew Leahey</a>, a contributor to the legal fediverse community. The initiatives are entirely ad-free, reflecting a commitment to an uncluttered user experience. While the labor behind these projects is donated, the costs of maintenance are substantial. Support in defraying these costs can be provided by donating to the <a href="https://www.patreon.com/esqsocial" target="_blank">esq.social Patreon</a>.</p>
-</div>
-
+            <h2>About</h2>
+            <p>These projects are thoughtfully (and mostly) created and/or maintained by <a href="https://esq.social/@andrew" target="_blank">Andrew Leahey</a>, a passionate contributor to the legal fediverse community. The initiatives are entirely ad-free, reflecting a commitment to an uncluttered user experience. While the labor behind these projects is generously donated, the costs of maintenance are substantial. Support in defraying these costs can be provided by donating to the <a href="https://www.patreon.com/esqsocial" target="_blank">esq.social Patreon</a>.</p>
+        </div>
     </div>
 </body>
 </html>

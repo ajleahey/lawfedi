@@ -28,6 +28,12 @@
             text-decoration: underline;
             cursor: pointer;
         }
+        .header-image {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+        }
         .grid-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -47,9 +53,6 @@
             grid-column: span 2;
             text-align: center;
         }
-        .grid-item:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
         .grid-item a, .about-section a {
             color: #333;
             text-decoration: none;
@@ -67,29 +70,26 @@
             border-radius: 5px;
             z-index: 1;
         }
-        /* Responsive Styles */
         @media only screen and (max-width: 600px) {
             .grid-container {
-                grid-template-columns: 1fr; /* Stacks items vertically on small screens */
+                grid-template-columns: 1fr;
             }
-
             .grid-item, .about-section {
-                padding: 15px; /* Smaller padding for small screens */
+                padding: 15px;
             }
-
             h1, h2 {
-                padding-left: 10px; /* Adjusting padding for headings */
+                padding-left: 10px;
                 padding-right: 10px;
             }
-
             .tooltip {
-                max-width: 90%; /* Ensure tooltip fits on small screens */
+                max-width: 90%;
             }
         }
     </style>
 </head>
 <body onclick="document.getElementById('tooltip').style.display='none'">
     <h1>lawfedi.org</h1>
+    <img src="rocketlogo.png" alt="Rocket Logo" class="header-image">
     <h2>Legal and legal-adjacent projects in the broader <span class="fediverse" onclick="event.stopPropagation(); document.getElementById('tooltip').style.display='block'">fediverse</span>.</h2>
     <div id="tooltip" class="tooltip" onclick="event.stopPropagation()">The fediverse is a decentralized social network that allows different platforms to communicate with each other. It promotes freedom, privacy, and interoperability across various social media sites.</div>
     <div class="grid-container">
@@ -113,7 +113,7 @@
         </div>
         <div class="about-section">
             <h2>About</h2>
-            <p>These projects are thoughtfully (and mostly) created and/or maintained by <a href="https://esq.social/@andrew" target="_blank">Andrew Leahey</a>, a passionate contributor to the legal fediverse community. The initiatives are entirely ad-free, reflecting a commitment to an uncluttered user experience. While the labor behind these projects is generously donated, the costs of maintenance are substantial. Support in defraying these costs can be provided by donating to the <a href="https://www.patreon.com/esqsocial" target="_blank">esq.social Patreon</a>.</p>
+            <p>These projects are thoughtfully (and mostly) created and/or maintained by <a href="https://esq.social/@andrew" target="_blank">Andrew Leahey</a>. They are entirely ad-free, and although labor is donated, you can support maintenance costs by donating to the <a href="https://www.patreon.com/esqsocial" target="_blank">esq.social Patreon</a>.</p>
         </div>
     </div>
 </body>

@@ -63,50 +63,6 @@
             border-radius: 10px;
             text-align: center;
             align-items: flex-start;
-            position: relative;
-        }
-        .social-logo,
-        .phonebook-logo,
-        .chat-logo {
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-        .social-logo::before,
-        .phonebook-logo::before,
-        .chat-logo::before {
-            content: '';
-            position: absolute;
-            background-color: white;
-        }
-        .social-logo::before {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
-        .phonebook-logo::before {
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
-        }
-        .chat-logo::before {
-            width: 40%;
-            height: 40%;
-            border-radius: 5px;
-            bottom: 0;
-            left: 30%;
-        }
-        .chat-logo::after {
-            content: '';
-            position: absolute;
-            background-color: white;
-            width: 60%;
-            height: 60%;
-            top: 0;
-            right: 0;
-            border-radius: 5px;
         }
         .project-title a {
             font-weight: bold;
@@ -121,6 +77,11 @@
             margin: 10px;
             border-radius: 10px;
             flex-basis: calc(100% - 40px);
+            text-align: center;
+        }
+        .about-box .project-title {
+            font-weight: bold;
+            color: #555;
         }
         @media (max-width: 768px) {
             .project-box {
@@ -138,22 +99,20 @@
         <div id="tooltip">The fediverse is a decentralized network of social platforms that use common protocols to communicate with each other. Users across different platforms can interact, fostering a sense of community and collaboration.</div>
         <div class="container">
             <div class="project-box">
-                
                 <div class="project-title"><a href="https://lawstodon.org" target="_blank">Lawstodon.org</a></div>
                 <div class="project-desc">The white pages for lawyers and jurists in the fediverse.</div>
             </div>
             <div class="project-box">
-                
                 <div class="project-title"><a href="https://esq.social" target="_blank">esq.social</a></div>
                 <div class="project-desc">The largest legal and law-adjacent Mastodon instance in the fediverse.</div>
             </div>
             <div class="project-box">
-                
                 <div class="project-title"><a href="https://chat.matrix.esq.social" target="_blank">esq.social Matrix</a></div>
                 <div class="project-desc">A Matrix server for legal professionals and academics. The server for third-party connecting purposes is <a href="https://matrix.matrix.esq.social" target="_blank">here</a> and the main room is <a href="https://matrix.to/#/#lawgeneral:matrix.esq.social" target="_blank">#lawgeneral</a>.</div>
             </div>
         </div>
         <div class="about-box">
+            <div class="project-title">About</div>
             These projects are lovingly (mostly) created and/or maintained by <a href="https://esq.social/@andrew" target="_blank">Andrew Leahey</a>. They are entirely ad-free, and while labor is donated, the costs of maintenance may be defrayed by people donating to the <a href="https://www.patreon.com/esqsocial" target="_blank">esq.social Patreon</a>.
         </div>
     </div>

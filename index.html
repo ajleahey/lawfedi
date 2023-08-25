@@ -17,6 +17,14 @@
             padding: 20px;
             margin: 0;
             text-align: center;
+            position: relative;
+        }
+        .header-image {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 20%;
+            height: auto;
         }
         h2 {
             color: #777;
@@ -28,93 +36,49 @@
             text-decoration: underline;
             cursor: pointer;
         }
-        .header-image {
-            display: block;
-            margin: auto;
-            max-width: 30%;
-            height: auto;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        .grid-item, .about-section {
-            background-color: #e0e0e0;
-            padding: 20px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-        .about-section {
-            background-color: #f0f0f0;
-            grid-column: span 2;
-            text-align: center;
-        }
-        .grid-item a, .about-section a {
-            color: #333;
-            text-decoration: none;
-        }
-        .grid-item a:hover, .about-section a:hover {
-            text-decoration: underline;
-        }
-        .tooltip {
-            display: none;
-            position: absolute;
-            background: #fff;
-            color: #333;
-            border: 1px solid #777;
+        .project-box {
+            flex-basis: calc(25% - 20px);
+            background-color: #ddd;
             padding: 10px;
-            border-radius: 5px;
-            z-index: 1;
+            margin: 10px;
+            min-height: 150px; /* Ensures uniform size */
+            box-sizing: border-box;
         }
-        @media only screen and (max-width: 600px) {
-            .grid-container {
-                grid-template-columns: 1fr;
-            }
-            .grid-item, .about-section {
-                padding: 15px;
-            }
-            h1, h2 {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-            .tooltip {
-                max-width: 90%;
+        .about-box {
+            background-color: #ececec;
+            padding: 20px;
+            margin: 10px;
+            width: calc(100% - 40px);
+        }
+        @media (max-width: 768px) {
+            .project-box {
+                flex-basis: calc(50% - 20px);
             }
         }
     </style>
 </head>
 <body onclick="document.getElementById('tooltip').style.display='none'">
-    <h1>lawfedi.org</h1>
-    <img src="rocketlogo.png" alt="Rocket Logo" class="header-image">
+    <h1>
+        lawfedi.org
+        <img src="rocketlogo.png" alt="Rocket Logo" class="header-image">
+    </h1>
     <h2>Legal and legal-adjacent projects in the broader <span class="fediverse" onclick="event.stopPropagation(); document.getElementById('tooltip').style.display='block'">fediverse</span>.</h2>
-    <div id="tooltip" class="tooltip" onclick="event.stopPropagation()">The fediverse is a decentralized social network that allows different platforms to communicate with each other. It promotes freedom, privacy, and interoperability across various social media sites.</div>
-    <div class="grid-container">
-        <div class="grid-item">
-            <a href="https://lawstodon.org" target="_blank">
-                <strong>Lawstodon.org</strong>
-                <p>The hub for legal professionals within the fediverse, Lawstodon.org acts as the white pages for lawyers and jurists, fostering collaboration and connections.</p>
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="https://esq.social" target="_blank">
-                <strong>esq.social</strong>
-                <p>Home to the largest legal community online, esq.social is the primary Mastodon instance for legal practitioners and those interested in law within the fediverse.</p>
-            </a>
-        </div>
-        <div class="grid-item">
-            <a href="https://chat.matrix.esq.social" target="_blank">
-                <strong>esq.social Matrix</strong>
-                <p>A specialized Matrix server for legal professionals and academics. Connect through <a href="https://matrix.matrix.esq.social" target="_blank">https://matrix.matrix.esq.social</a>. Join the main room: <a href="https://matrix.to/#/#lawgeneral:matrix.esq.social" target="_blank">#lawgeneral</a>.</p>
-            </a>
-        </div>
-        <div class="about-section">
-            <h2>About</h2>
-            <p>These projects are thoughtfully (and mostly) created and/or maintained by <a href="https://esq.social/@andrew" target="_blank">Andrew Leahey</a>. They are entirely ad-free, and although labor is donated, you can support maintenance costs by donating to the <a href="https://www.patreon.com/esqsocial" target="_blank">esq.social Patreon</a>.</p>
-        </div>
+    <!-- Project Boxes -->
+    <div class="container">
+        <a href="https://lawstodon.org" target="_blank" class="project-box">Lawstodon.org - the white pages for lawyers and jurists in the fediverse.</a>
+        <a href="https://esq.social" target="_blank" class="project-box">esq.social - the largest legal and law-adjacent Mastodon instance in the fediverse.</a>
+        <a href="https://chat.matrix.esq.social" target="_blank" class="project-box">esq.social Matrix - a Matrix server for legal professionals and academics. Server: <a href="https://matrix.matrix.esq.social" target="_blank">https://matrix.matrix.esq.social</a>, main room: <a href="https://matrix.to/#/#lawgeneral:matrix.esq.social" target="_blank">#lawgeneral</a>.</a>
+        <!-- Other Project Boxes -->
+    </div>
+    <!-- About Section -->
+    <div class="about-box">
+        <h3>About</h3>
+        <p>These projects are lovingly (mostly) created and/or maintained by <a href="https://esq.social/@andrew" target="_blank">Andrew Leahey</a>. They are entirely ad-free, and although labor is donated, you can support maintenance costs by donating to the <a href="https://www.patreon.com/esqsocial" target="_blank">esq.social Patreon</a>.</p>
     </div>
 </body>
 </html>

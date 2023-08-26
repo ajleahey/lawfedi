@@ -5,7 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lawfedi.org - Legal professionals and attorneys on Mastodon and in the fediverse.</title>
     <style>
-        /* ... (same as your existing styles) ... */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+        }
+        h1 {
+            background-color: #bbb;
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .header-image {
+            max-width: 20%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .content {
+            max-width: 60%;
+            margin: auto;
+        }
+        h2 {
+            color: #777;
+            margin: 10px 20px 20px 20px;
+            text-align: center;
+        }
+        .fediverse {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #tooltip {
+            display: none;
+            text-align: center;
+            background-color: #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project-box {
+            flex-basis: calc(50% - 20px);
+            background-color: #ddd;
+            padding: 10px;
+            margin: 10px;
+            min-height: 150px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            text-align: center;
+            align-items: flex-start;
+        }
+        .project-title a {
+            font-weight: bold;
+            color: #555;
+        }
+        .project-desc {
+            margin-top: 10px;
+        }
+        .about-box {
+            background-color: #ececec;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            flex-basis: calc(100% - 40px);
+            text-align: center;
+        }
+        .about-box .project-title {
+            font-weight: bold;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .project-box {
+                flex-basis: calc(100% - 20px);
+            }
+        }
     </style>
 </head>
 <body onclick="document.getElementById('tooltip').style.display='none'">
@@ -28,15 +110,14 @@
                 <div class="project-title"><a href="https://chat.matrix.esq.social" target="_blank">esq.social Matrix</a></div>
                 <div class="project-desc">A Matrix server for legal professionals and academics. Matrix is an open-source alternative to Slack and Discord, similar to IRC.</div>
             </div>
-            <!-- New project box -->
             <div class="project-box">
                 <div class="project-title"><a href="https://links.esq.social" target="_blank">links.esq.social</a></div>
-                <div class="project-desc">A legal and law-adjacent instance of Lemmy, the fediverse equivalent to Reddit, designed for link sharing among professionals.</div>
+                <div class="project-desc">A legal and law-adjacent instance of Lemmy, which is the fediverse equivalent to Reddit, designed for link sharing among professionals.</div>
             </div>
         </div>
         <div class="about-box">
-            <div class="project-title">About</div>
-            These projects are lovingly (mostly) created and/or maintained by <a href="https://esq.social/@andrew" target="_blank">Andrew Leahey</a>. They are entirely ad-free, and while labor is donated, the costs of maintenance may be defrayed by people donating to the <a href="https://www.patreon.com/esqsocial" target="_blank">esq.social Patreon</a>.
+            <div class="project-title">About Lawfedi.org</div>
+            <div class="project-desc">Lawfedi.org is a hub for legal professionals, academics, and enthusiasts who are interested in the decentralized social web. The projects listed here offer various options for engagement, whether you're a seasoned attorney or just curious about the law.</div>
         </div>
     </div>
 </body>
